@@ -66,23 +66,27 @@ nav{
                 margin-bottom: .2rem;
             }
         }
-        .container-contador{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            gap: .5rem;
-            button{
-                padding: .8rem;
-                border: none;
-                background-color: bisque;
-            }
-            .botones{
-                display: flex;
-                flex-flow: row nowrap;
-                gap: 1rem;
-            }
-        }
     }
 }
 
+.container-contador{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    button{
+        padding: .8rem;
+        border: none;
+        background-color: bisque;
+    }
+    .botones{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1rem;
+    }
+}
+.detalleProducto{
+    margin-top: 5rem;
+    width: 350px;
+}

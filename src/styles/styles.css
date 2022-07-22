@@ -116,7 +116,7 @@ nav ul {
   margin-bottom: .2rem;
 }
 
-.catalogo .producto .container-contador {
+.container-contador {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,13 +133,13 @@ nav ul {
   gap: .5rem;
 }
 
-.catalogo .producto .container-contador button {
+.container-contador button {
   padding: .8rem;
   border: none;
   background-color: bisque;
 }
 
-.catalogo .producto .container-contador .botones {
+.container-contador .botones {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,5 +148,10 @@ nav ul {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   gap: 1rem;
+}
+
+.detalleProducto {
+  margin-top: 5rem;
+  width: 350px;
 }
 /*# sourceMappingURL=styles.css.map */

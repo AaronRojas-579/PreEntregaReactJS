@@ -1,7 +1,8 @@
 import React  from 'react'
-import Items from '../components/Items'
+import ItemDetail from '../components/ItemDetail'
 import {prendas} from './ItemListContainer'
 import {useParams} from 'react-router'
+import { useState , useEffect} from 'react'
 
 const promesa = (time,task) =>{
     return new Promise ((resolve,reject)=>{
@@ -12,14 +13,21 @@ const promesa = (time,task) =>{
 } 
 
 const ItemDetailContainer = () => {
+    const [producto,setProducto] = useState([]);
+    const {idItem} = useParams();
 
-    const {id} = useParams;
-    const arrayId = prendas.filter(item=>item.id === 2)
-    console.log(arrayId);
+    useEffect(()=>{
+      promesa(2000,prendas.find(item=>item.id === parseInt(idItem)))
+      .then(res=>setProducto(res))
+  },[idItem])
+
+  console.log(producto);
 
   return (
     <div className='catalogo'>
-         <Items array={arrayId[0]} ></Items>)
+      {
+        producto.length!==0?<ItemDetail arrayDetail={producto}></ItemDetail>:<p>Cargando...</p>
+      }  
     </div>
   )
 }

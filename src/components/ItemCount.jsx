@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export const ItemCount = ({stockAct,prenda}) => {
+export const ItemCount = ({stockAct,ClicCarrito}) => {
     const [stock,setStock] = useState(stockAct);
     const [cantidad, setCantidad] = useState (0);
     const ClicSumar = ()=>{
@@ -15,9 +15,6 @@ export const ItemCount = ({stockAct,prenda}) => {
             setStock(stock + 1);
         }
     }
-    const ClicCarrido = ()=>{
-        alert(`Agregaste al Carrito ${cantidad} de ${prenda} `)
-    }
   return (
     <>
     <div className='container-contador'>
@@ -25,7 +22,9 @@ export const ItemCount = ({stockAct,prenda}) => {
         <div className='botones'>
         <button onClick={ClicSumar}> + </button>
         <button onClick={ClicRestar}> - </button>
-        <button onClick={ClicCarrido}>Agregar al Carrito</button>
+        {
+            cantidad>0?<button onClick={ClicCarrito}>Agregar al Carrito</button>:""
+        }
         </div>
         <h4>Stock Disponible: {stock}</h4>
     </div>

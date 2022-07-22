@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom'
 
 const Button = (props)=>{
     return(
@@ -14,11 +14,9 @@ const Productos = (props)=>{
         <div className='product-text'>
             <h3>Calidad: {props.calidad}</h3>
             <h3>Para: {props.para}</h3>
-            <h3>Precio: {props.precio}</h3>
-            <Button nombre={props.nombre}></Button>
+            <h3>Precio: {props.precio}$</h3>
+            <Link to = {`/item/${props.id}`} ><Button nombre={props.nombre}></Button></Link>
         </div>
-        <ItemCount stockAct={5} prenda={props.nombre}></ItemCount>
-
     </div>
     )
 }
@@ -26,7 +24,7 @@ const Items = ({array}) => {
   return (
 
     <div className='container-products'>
-        <Productos nombre={array.nombre} imagen={array.imagen} calidad={array.calidad} para={array.para} precio={array.precio} />
+        <Productos nombre={array.nombre} imagen={array.imagen} calidad={array.calidad} para={array.para} precio={array.precio} id={array.id} />
     </div>
   )
 }
