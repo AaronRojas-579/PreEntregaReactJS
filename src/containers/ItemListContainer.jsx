@@ -8,7 +8,8 @@ export const prendas = [
         imagen:"/image/camperaGris-mujer.jpg",
         para:"Mujer",
         id:1,
-        precio: 1700
+        precio: 1700,
+        cantidadCarrito: 0
         
     },
     {
@@ -17,7 +18,8 @@ export const prendas = [
         imagen:"/image/camperaNegro-mujer.jpg",
         para:"Mujer",
         id:2,
-        precio: 2000
+        precio: 2000,
+        cantidadCarrito: 0
 
     },
     {
@@ -26,7 +28,8 @@ export const prendas = [
         imagen:"/image/camperaNegra-mujer2.jpg",
         para:"Mujer",
         id:3,
-        precio: 1800
+        precio: 1800,
+        cantidadCarrito: 0
 
     },
     {
@@ -35,7 +38,8 @@ export const prendas = [
         imagen:"/image/remeraBlanca-mujer.jpg",
         para:"Mujer",
         id:4,
-        precio: 700
+        precio: 700,
+        cantidadCarrito: 0
 
     },
     {
@@ -44,7 +48,8 @@ export const prendas = [
         imagen:"/image/camperaNegro-hombre.jpg",
         para:"Hombre",
         id:5,
-        precio: 1800
+        precio: 1800,
+        cantidadCarrito: 0
 
     },
     {
@@ -53,7 +58,8 @@ export const prendas = [
         imagen:"/image/remeraBlanco-hombre.jpg",
         para:"Hombre",
         id:6,
-        precio: 800
+        precio: 800,
+        cantidadCarrito: 0
 
     }
 
