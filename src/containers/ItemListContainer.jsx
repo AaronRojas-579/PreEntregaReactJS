@@ -9,7 +9,8 @@ export const prendas = [
         para:"Mujer",
         id:1,
         precio: 1700,
-        cantidadCarrito: 0
+        cantidadCarrito: 0,
+        totalPrecio : 0
         
     },
     {
@@ -19,7 +20,8 @@ export const prendas = [
         para:"Mujer",
         id:2,
         precio: 2000,
-        cantidadCarrito: 0
+        cantidadCarrito: 0,
+        totalPrecio : 0
 
     },
     {
@@ -29,7 +31,8 @@ export const prendas = [
         para:"Mujer",
         id:3,
         precio: 1800,
-        cantidadCarrito: 0
+        cantidadCarrito: 0,
+        totalPrecio : 0
 
     },
     {
@@ -39,7 +42,8 @@ export const prendas = [
         para:"Mujer",
         id:4,
         precio: 700,
-        cantidadCarrito: 0
+        cantidadCarrito: 0,
+        totalPrecio : 0
 
     },
     {
@@ -49,7 +53,8 @@ export const prendas = [
         para:"Hombre",
         id:5,
         precio: 1800,
-        cantidadCarrito: 0
+        cantidadCarrito: 0,
+        totalPrecio : 0
 
     },
     {
@@ -59,7 +64,8 @@ export const prendas = [
         para:"Hombre",
         id:6,
         precio: 800,
-        cantidadCarrito: 0
+        cantidadCarrito: 0,
+        totalPrecio : 0
 
     }
 

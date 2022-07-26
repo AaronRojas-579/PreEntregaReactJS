@@ -112,3 +112,29 @@ nav{
         font-weight: 600;
     }
 }
+.carrito__container{
+    position: relative;
+    h4{
+        padding: .2rem;
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        position: absolute;
+        bottom: .6rem;
+        left: .9rem;
+        border-radius: 50%;
+    }
+}
+
+.totalPagar{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 1.5rem;
+    width: auto;
+    background-color: bisque;
+
+}
