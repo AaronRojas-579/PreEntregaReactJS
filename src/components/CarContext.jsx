@@ -5,9 +5,23 @@ export const CartContext = createContext();
 const CarContextProvider = ({ children }) => {
     const [carList, setCarList] = useState([])
 
-    const addToCart = (item) => {
-        if(!carList.includes(item)){
-            setCarList([...carList,item]);
+    const addToCart = (item,cantidad) => {
+        let arrayId = [];
+        carList.map(item=> arrayId = [...arrayId,item.id])
+        if(!arrayId.includes(item.id)){
+            setCarList([...carList,{
+                id: item.id,
+                imagen : item.imagen,
+                nombre: item.nombre,
+                precio:item.precio,
+                totalPrecio : item.totalPrecio,
+                cantidadCarrito: cantidad,
+            }])
+        }else{
+            let nuevoArray = carList.find(element => element.id === item.id);
+            nuevoArray.cantidadCarrito += cantidad
+            let arrayCarrito = carList.filter(e => e.id !== item.id)
+            setCarList([...arrayCarrito,nuevoArray])
         }
     }
     const removeToCart = (item) =>{

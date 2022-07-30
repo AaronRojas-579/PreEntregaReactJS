@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import { CartContext } from './CarContext'
 import ItemCount from './ItemCount'
 
@@ -16,18 +16,14 @@ const ItemSinBoton = (props) => {
   )
 }
 
-const ItemDetail = ({ arrayDetail }) => {
+const ItemDetail = ( {arrayDetail} ) => {
 
   const test = useContext(CartContext)
+  const [count,setCount] = useState (0);
 
   const ClicCarrito = (cantidad) => {
-    alert(`has agregado ${cantidad} del producto ${arrayDetail.nombre}`)
-    arrayDetail.cantidadCarrito += cantidad
-    if (arrayDetail.cantidadCarrito > 5){
-      arrayDetail.cantidadCarrito = 5;
-    }
-    test.addToCart(arrayDetail)
-
+    setCount (cantidad);
+    test.addToCart(arrayDetail,cantidad)
   }
 
   return (
@@ -38,7 +34,7 @@ const ItemDetail = ({ arrayDetail }) => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reprehenderit in corporis nemo laudantium sunt! Ut quos, aliquam minus tempore aspernatur quo praesentium blanditiis exercitationem, fugiat, dolorem nobis delectus excepturi.
         </p>
         <br />
-        <ItemCount stockAct={5} prenda={arrayDetail.nombre} ClicCarrito={ClicCarrito}></ItemCount>
+        <ItemCount stockAct={5} prenda={arrayDetail.nombre} ClicCarrito={ClicCarrito} seAgregoCarrito={count} ></ItemCount>
       </div>
     </>
   )
