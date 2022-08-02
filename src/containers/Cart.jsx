@@ -2,10 +2,52 @@ import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../components/CarContext'
 import TotalCart from '../components/TotalCart';
+import {db} from "../utils/firebaseConfig"
+import {collection,serverTimestamp,setDoc,doc, updateDoc, increment} from "firebase/firestore";
+import Swal from 'sweetalert2'
+
+const mostrarOrden = (idOrden) => {
+  Swal.fire(
+    'Orden Guardada',
+    'El Código de tu order es'+ idOrden,
+    'success'
+  )
+}
 
 function Cart() {
   const test = useContext(CartContext);
   console.log(test.carList);
+
+  const createOrder = ()=>{
+    let order = {
+      buyer:{
+        name: "Aaron Rojas",
+        email:"aaron.rojas@hotmail.com",
+        phone : 1123240855
+      },
+      date: serverTimestamp(),
+      items: test.carList,
+      total: test.priceCart(),
+    }
+    console.log(order);
+    const orderInFirestore = async() =>{
+      const newOrderRef = doc(collection(db,"orders"))
+      await setDoc (newOrderRef, order)
+      return newOrderRef
+    }
+    orderInFirestore().then(result => mostrarOrden(result.id))
+    .catch(err => console.log(err))
+
+    test.carList.forEach(async(item)=>{
+      const itemRef = doc(db,"products",item.id)
+      await updateDoc(itemRef,{
+        stock:increment(-item.cantidadCarrito)
+      })
+    })
+    test.removeAll()
+  }
+
+
   return (
     <div>
       {
@@ -26,7 +68,7 @@ function Cart() {
           </div>
       }
       {
-        test.carList.length > 0 && <TotalCart></TotalCart>
+        test.carList.length > 0 && <TotalCart event={createOrder}></TotalCart>
       }
     </div>
 

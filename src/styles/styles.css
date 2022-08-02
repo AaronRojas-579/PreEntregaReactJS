@@ -222,4 +222,12 @@ nav ul {
   width: auto;
   background-color: bisque;
 }
+
+.checkOut {
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 1rem;
+}
 /*# sourceMappingURL=styles.css.map */

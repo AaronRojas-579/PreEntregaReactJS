@@ -34,7 +34,7 @@ const ItemDetail = ( {arrayDetail} ) => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reprehenderit in corporis nemo laudantium sunt! Ut quos, aliquam minus tempore aspernatur quo praesentium blanditiis exercitationem, fugiat, dolorem nobis delectus excepturi.
         </p>
         <br />
-        <ItemCount stockAct={5} prenda={arrayDetail.nombre} ClicCarrito={ClicCarrito} seAgregoCarrito={count} ></ItemCount>
+        <ItemCount stockAct={arrayDetail.stock} prenda={arrayDetail.nombre} ClicCarrito={ClicCarrito} seAgregoCarrito={count} ></ItemCount>
       </div>
     </>
   )

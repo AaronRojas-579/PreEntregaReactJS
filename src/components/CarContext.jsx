@@ -15,7 +15,7 @@ const CarContextProvider = ({ children }) => {
                 nombre: item.nombre,
                 precio:item.precio,
                 totalPrecio : item.totalPrecio,
-                cantidadCarrito: cantidad,
+                cantidadCarrito: cantidad<item.stock?cantidad:item.stock,
             }])
         }else{
             let nuevoArray = carList.find(element => element.id === item.id);
@@ -28,6 +28,9 @@ const CarContextProvider = ({ children }) => {
         const nuevoCartList = carList.filter((list)=> list !== item );
         item.cantidadCarrito = 0;
         setCarList(nuevoCartList);
+    }
+    const removeAll = () =>{
+        setCarList([])
     }
     const countCart = ()=>{
         let a = 0;
@@ -46,7 +49,7 @@ const CarContextProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ carList, addToCart,removeToCart,countCart,priceCart}}>
+        <CartContext.Provider value={{ carList, addToCart,removeToCart,countCart,priceCart,removeAll}}>
             {children}
         </CartContext.Provider>
     )

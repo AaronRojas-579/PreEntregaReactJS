@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export const ItemCount = ({ stockAct, ClicCarrito, seAgregoCarrito }) => {
+
+export const ItemCount = ({ stockAct,ClicCarrito, seAgregoCarrito }) => {
     const [stock, setStock] = useState(stockAct);
     const [cantidad, setCantidad] = useState(0);
     const ClicSumar = () => {
