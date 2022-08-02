@@ -17,6 +17,13 @@ const mostrarOrden = (idOrden) => {
 function Cart() {
   const test = useContext(CartContext);
   console.log(test.carList);
+  let itemsForDB = test.carList.map(item=>({
+    id:item.id,
+    title: item.nombre,
+    price:item.precio,
+    cantidad: item.cantidadCarrito
+  }))
+
 
   const createOrder = ()=>{
     let order = {
@@ -26,7 +33,7 @@ function Cart() {
         phone : 1123240855
       },
       date: serverTimestamp(),
-      items: test.carList,
+      items: itemsForDB,
       total: test.priceCart(),
     }
     console.log(order);
