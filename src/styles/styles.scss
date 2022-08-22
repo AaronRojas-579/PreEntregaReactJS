@@ -146,3 +146,22 @@ nav{
     padding: 1rem;
 
 }
+.formUser{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    width:auto;
+    margin: 2rem;
+    padding: 2rem;
+    background-color:bisque;
+    color: balck;
+    font-size: 1.2rem; 
+    input{
+        border: none;
+        padding: .5rem 3rem;
+        color: black;
+        margin: .2rem;
+    }
+}

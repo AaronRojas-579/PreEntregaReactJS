@@ -14,7 +14,7 @@ const CarContextProvider = ({ children }) => {
                 imagen : item.imagen,
                 nombre: item.nombre,
                 precio:item.precio,
-                totalPrecio : item.totalPrecio,
+                totalPrecio : 0,
                 cantidadCarrito: cantidad<item.stock?cantidad:item.stock,
             }])
         }else{

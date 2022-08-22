@@ -5,6 +5,7 @@ import TotalCart from '../components/TotalCart';
 import {db} from "../utils/firebaseConfig"
 import {collection,serverTimestamp,setDoc,doc, updateDoc, increment} from "firebase/firestore";
 import Swal from 'sweetalert2'
+import Form from '../components/Form';
 
 const mostrarOrden = (idOrden) => {
   Swal.fire(
@@ -16,7 +17,6 @@ const mostrarOrden = (idOrden) => {
 
 function Cart() {
   const test = useContext(CartContext);
-  console.log(test.carList);
   let itemsForDB = test.carList.map(item=>({
     id:item.id,
     title: item.nombre,
@@ -25,18 +25,17 @@ function Cart() {
   }))
 
 
-  const createOrder = ()=>{
+  const createOrder = (arrayUser)=>{
     let order = {
       buyer:{
-        name: "Aaron Rojas",
-        email:"aaron.rojas@hotmail.com",
-        phone : 1123240855
+        name: arrayUser.nombre,
+        email:arrayUser.mail,
+        phone : arrayUser.number
       },
       date: serverTimestamp(),
       items: itemsForDB,
       total: test.priceCart(),
     }
-    console.log(order);
     const orderInFirestore = async() =>{
       const newOrderRef = doc(collection(db,"orders"))
       await setDoc (newOrderRef, order)
@@ -75,7 +74,10 @@ function Cart() {
           </div>
       }
       {
-        test.carList.length > 0 && <TotalCart event={createOrder}></TotalCart>
+        test.carList.length > 0 && <>
+          <TotalCart></TotalCart>
+          <Form event={createOrder}></Form>
+        </>
       }
     </div>
 

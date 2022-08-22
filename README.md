@@ -1,70 +1,47 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Proyecto Taniker
 
-## Available Scripts
+Protecto final de CoderHouse, utilizando la idea de un e-commerce de indumentaria con la marca Taniker
 
-In the project directory, you can run:
 
-### `npm start`
+## Como comenzar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - [Repositorio en GitHub](https://github.com/AaronRojas-579/PreEntregaReactJS.git)
+ - [Video Tutorial](https://firebasestorage.googleapis.com/v0/b/taniker-rojas.appspot.com/o/React%20App%20-%20Google%20Chrome%202022-08-16%2018-41-58.mp4?alt=media&token=cdf6ca46-ac46-439a-b3bf-a49586f0811e)
+## Autor
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [@AaronRojas-579](https://github.com/AaronRojas-579)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Appendix
+En este proyecto de e-commerce podemos simular la compra online, incluyendo el carrito de compra  como tambiem al confirmar la compra generará una orden donde se registra todos los pedidos del cliente, para mas consultas puede ver el video tutorial que se encuentra arriba
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![interfaz](https://firebasestorage.googleapis.com/v0/b/taniker-rojas.appspot.com/o/Captura%20de%20pantalla%202022-08-16%20184914.png?alt=media&token=51e5917e-3566-4552-af80-abb66ebfde5d)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![compra](https://firebasestorage.googleapis.com/v0/b/taniker-rojas.appspot.com/o/Captura%20de%20pantalla%202022-08-16%20185114.png?alt=media&token=ba380fd9-5fe8-49e2-80b3-fb4bf491a462)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalación
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+una vez clonado el repositorio podrá ingresar a él con el siguiente comando en la terminal de su compilador 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+  npm start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tecnologías que se utilizó
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**HTML**
 
-### Code Splitting
+**CSCC**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**SASS**
 
-### Analyzing the Bundle Size
+**JAVASCRIPT**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**REACTJS**
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -230,4 +230,34 @@ nav ul {
   font-weight: 900;
   padding: 1rem;
 }
+
+.formUser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .4rem;
+  width: auto;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: bisque;
+  color: balck;
+  font-size: 1.2rem;
+}
+
+.formUser input {
+  border: none;
+  padding: .5rem 3rem;
+  color: black;
+  margin: .2rem;
+}
 /*# sourceMappingURL=styles.css.map */

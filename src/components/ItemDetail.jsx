@@ -30,9 +30,7 @@ const ItemDetail = ( {arrayDetail} ) => {
     <>
       <ItemSinBoton nombre={arrayDetail.nombre} imagen={arrayDetail.imagen} calidad={arrayDetail.calidad} para={arrayDetail.para} precio={arrayDetail.precio} id={arrayDetail.id}></ItemSinBoton>
       <div>
-        <p className='detalleProducto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum delectus voluptas aut eaque eum vel nulla beatae debitis necessitatibus ullam numquam perferendis, a laborum, illo accusamus adipisci fugit eveniet.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reprehenderit in corporis nemo laudantium sunt! Ut quos, aliquam minus tempore aspernatur quo praesentium blanditiis exercitationem, fugiat, dolorem nobis delectus excepturi.
-        </p>
+        <p className='detalleProducto'>{arrayDetail.description}</p>
         <br />
         <ItemCount stockAct={arrayDetail.stock} prenda={arrayDetail.nombre} ClicCarrito={ClicCarrito} seAgregoCarrito={count} ></ItemCount>
       </div>

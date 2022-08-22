@@ -24,7 +24,6 @@ const ItemDetailContainer = () => {
     .catch(err=>console.log(err))
   }, [idItem])
 
-  console.log(producto);
 
   return (
     <div className='catalogo'>
